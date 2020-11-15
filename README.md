@@ -100,7 +100,7 @@ Project Link: [https://github.com/DM1TRYM/SpaceGameTest](https://github.com/DM1T
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [xcode-shield]: https://img.shields.io/badge/xcode-v12.0.1-blue
-xcode-url]: https://developer.apple.com/xcode/
+[xcode-url]: https://developer.apple.com/xcode/
 
 [swift-shield]: https://img.shields.io/badge/swift-v5.3-%23fe4b2d
 [swift-url]: https://swift.org/
