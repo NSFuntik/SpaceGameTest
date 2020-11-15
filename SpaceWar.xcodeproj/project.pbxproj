@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1174447B2560D209008AFB61 /* LinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174447A2560D209008AFB61 /* LinksService.swift */; };
+		1174447E2560D42F008AFB61 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174447D2560D42F008AFB61 /* WebViewController.swift */; };
 		118EA03D24C1CFB000AFFB78 /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03C24C1CFB000AFFB78 /* Stars.sks */; };
 		118EA04024C1DA4900AFFB78 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03E24C1DA4900AFFB78 /* Fire.sks */; };
 		118EA04524C1E0CC00AFFB78 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		1174447A2560D209008AFB61 /* LinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksService.swift; sourceTree = "<group>"; };
+		1174447D2560D42F008AFB61 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		118EA03C24C1CFB000AFFB78 /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
 		118EA03E24C1DA4900AFFB78 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				1174447A2560D209008AFB61 /* LinksService.swift */,
 				11969A1824B384F500F2C9FB /* GameViewController.swift */,
 				118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */,
+				1174447D2560D42F008AFB61 /* WebViewController.swift */,
 				11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */,
 				11969A1A24B384F500F2C9FB /* Main.storyboard */,
 				11EE7885256049CC00C97C9E /* Scenes */,
@@ -246,6 +249,7 @@
 				118EA04524C1E0CC00AFFB78 /* PauseViewController.swift in Sources */,
 				11969A1924B384F500F2C9FB /* GameViewController.swift in Sources */,
 				11969A1124B384F500F2C9FB /* AppDelegate.swift in Sources */,
+				1174447E2560D42F008AFB61 /* WebViewController.swift in Sources */,
 				11D34ABF24C4A9B800A4DF8D /* GameOverViewController.swift in Sources */,
 				1174447B2560D209008AFB61 /* LinksService.swift in Sources */,
 			);

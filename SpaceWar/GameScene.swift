@@ -17,7 +17,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let spaceShipCategory: UInt32 = 0x1 << 0
     let asteroidCategory: UInt32 = 0x1 << 1
     
-    
+    var didFinishScene: (() -> Void)?
+
     var score = 0
     var spaceShip: SKSpriteNode!
     var scoreLabel: SKLabelNode!
@@ -261,6 +262,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         let hitSoundAction = SKAction.playSoundFileNamed("hitSound", waitForCompletion: true)
         run(hitSoundAction)
+        //self.didFinishScene?()
     }
     
     

@@ -19,6 +19,7 @@ class GameOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     @IBAction func resetButton(_ sender: UIButton) {

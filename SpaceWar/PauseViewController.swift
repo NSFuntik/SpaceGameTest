@@ -39,6 +39,14 @@ class PauseViewController: UIViewController {
     }
     
     @IBAction func storeButtonPress(_ sender: UIButton) {
+        let webVC = WebViewController()
+        addChild(webVC)
+        view.addSubview(webVC.view)
+        webVC.view.frame = view.bounds
+        webVC.view.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            webVC.view.alpha = 1
+        }
     }
     
     func showLoginScreen() {
@@ -53,5 +61,21 @@ class PauseViewController: UIViewController {
             loginButton.alpha = 1
         }
     }
+    
+    private func openDeepLink() {
+        let appURLScheme = "testspace://"
+        guard let appURL = URL(string: appURLScheme) else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(appURL) {
+            UIApplication.shared.open(appURL,
+                                      options: [:],
+                                      completionHandler: nil)
+        }
+        else {
+            print("can't load link")
+        }
+    }
+
 }
 
