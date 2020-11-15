@@ -12,6 +12,8 @@
 		118EA03D24C1CFB000AFFB78 /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03C24C1CFB000AFFB78 /* Stars.sks */; };
 		118EA04024C1DA4900AFFB78 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03E24C1DA4900AFFB78 /* Fire.sks */; };
 		118EA04524C1E0CC00AFFB78 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */; };
+		1192C2452561696E00CC3437 /* GameVCDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192C2442561696E00CC3437 /* GameVCDelegates.swift */; };
+		1192C25825616D8A00CC3437 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1192C25725616D8500CC3437 /* backgroundMusic.mp3 */; };
 		11969A1124B384F500F2C9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11969A1024B384F500F2C9FB /* AppDelegate.swift */; };
 		11969A1324B384F500F2C9FB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11969A1224B384F500F2C9FB /* GameScene.sks */; };
 		11969A1524B384F500F2C9FB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11969A1424B384F500F2C9FB /* Actions.sks */; };
@@ -19,8 +21,6 @@
 		11969A1924B384F500F2C9FB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11969A1824B384F500F2C9FB /* GameViewController.swift */; };
 		11969A1C24B384F500F2C9FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11969A1A24B384F500F2C9FB /* Main.storyboard */; };
 		11969A1E24B384F700F2C9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11969A1D24B384F700F2C9FB /* Assets.xcassets */; };
-		11D34ABB24C489C000A4DF8D /* hitSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11D34ABA24C489C000A4DF8D /* hitSound.mp3 */; };
-		11D34ABD24C48BC400A4DF8D /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11D34ABC24C48BC400A4DF8D /* backgroundMusic.mp3 */; };
 		11D34ABF24C4A9B800A4DF8D /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */; };
 		B4DD847698DD1E6B15729A4A /* Pods_SpaceWar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2436FDA3F6CF1AFC68FB10 /* Pods_SpaceWar.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +31,9 @@
 		118EA03C24C1CFB000AFFB78 /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
 		118EA03E24C1DA4900AFFB78 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		1192C2442561696E00CC3437 /* GameVCDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVCDelegates.swift; sourceTree = "<group>"; };
+		1192C24F25616B9500CC3437 /* hitSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hitSound.mp3; sourceTree = "<group>"; };
+		1192C25625616D8500CC3437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/backgroundMusic.mp3; sourceTree = "<group>"; };
 		11969A0D24B384F500F2C9FB /* SpaceWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11969A1024B384F500F2C9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11969A1224B384F500F2C9FB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -40,8 +43,6 @@
 		11969A1B24B384F500F2C9FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11969A1D24B384F700F2C9FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		11969A1F24B384F700F2C9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11D34ABA24C489C000A4DF8D /* hitSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hitSound.mp3; sourceTree = "<group>"; };
-		11D34ABC24C48BC400A4DF8D /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		642707E2ED319D6C3F01BE6F /* Pods-SpaceWar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceWar.debug.xcconfig"; path = "Target Support Files/Pods-SpaceWar/Pods-SpaceWar.debug.xcconfig"; sourceTree = "<group>"; };
 		CE53558BA27EE89A221C38BE /* Pods-SpaceWar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceWar.release.xcconfig"; path = "Target Support Files/Pods-SpaceWar/Pods-SpaceWar.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +61,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1192C24725616A9100CC3437 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11969A1824B384F500F2C9FB /* GameViewController.swift */,
+				1192C2442561696E00CC3437 /* GameVCDelegates.swift */,
+				118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */,
+				1174447D2560D42F008AFB61 /* WebViewController.swift */,
+				11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1192C24825616AA700CC3437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11969A1A24B384F500F2C9FB /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1192C25B25616F1B00CC3437 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				11969A1024B384F500F2C9FB /* AppDelegate.swift */,
+				1174447A2560D209008AFB61 /* LinksService.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		1192C25C25616F3600CC3437 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1192C25725616D8500CC3437 /* backgroundMusic.mp3 */,
+				1192C24F25616B9500CC3437 /* hitSound.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		11969A0424B384F500F2C9FB = {
 			isa = PBXGroup;
 			children = (
@@ -81,18 +120,12 @@
 		11969A0F24B384F500F2C9FB /* SpaceWar */ = {
 			isa = PBXGroup;
 			children = (
-				11969A1024B384F500F2C9FB /* AppDelegate.swift */,
-				11969A1624B384F500F2C9FB /* GameScene.swift */,
-				1174447A2560D209008AFB61 /* LinksService.swift */,
-				11969A1824B384F500F2C9FB /* GameViewController.swift */,
-				118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */,
-				1174447D2560D42F008AFB61 /* WebViewController.swift */,
-				11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */,
-				11969A1A24B384F500F2C9FB /* Main.storyboard */,
+				1192C25B25616F1B00CC3437 /* App */,
+				1192C24725616A9100CC3437 /* ViewControllers */,
+				1192C24825616AA700CC3437 /* View */,
 				11EE7885256049CC00C97C9E /* Scenes */,
 				11969A1D24B384F700F2C9FB /* Assets.xcassets */,
-				11D34ABA24C489C000A4DF8D /* hitSound.mp3 */,
-				11D34ABC24C48BC400A4DF8D /* backgroundMusic.mp3 */,
+				1192C25C25616F3600CC3437 /* Sounds */,
 				11969A1F24B384F700F2C9FB /* Info.plist */,
 			);
 			path = SpaceWar;
@@ -101,6 +134,7 @@
 		11EE7885256049CC00C97C9E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				11969A1624B384F500F2C9FB /* GameScene.swift */,
 				11969A1224B384F500F2C9FB /* GameScene.sks */,
 				11969A1424B384F500F2C9FB /* Actions.sks */,
 				118EA03E24C1DA4900AFFB78 /* Fire.sks */,
@@ -186,10 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				118EA03D24C1CFB000AFFB78 /* Stars.sks in Resources */,
+				1192C25825616D8A00CC3437 /* backgroundMusic.mp3 in Resources */,
 				11969A1C24B384F500F2C9FB /* Main.storyboard in Resources */,
-				11D34ABD24C48BC400A4DF8D /* backgroundMusic.mp3 in Resources */,
 				11969A1324B384F500F2C9FB /* GameScene.sks in Resources */,
-				11D34ABB24C489C000A4DF8D /* hitSound.mp3 in Resources */,
 				118EA04024C1DA4900AFFB78 /* Fire.sks in Resources */,
 				11969A1E24B384F700F2C9FB /* Assets.xcassets in Resources */,
 				11969A1524B384F500F2C9FB /* Actions.sks in Resources */,
@@ -246,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11969A1724B384F500F2C9FB /* GameScene.swift in Sources */,
+				1192C2452561696E00CC3437 /* GameVCDelegates.swift in Sources */,
 				118EA04524C1E0CC00AFFB78 /* PauseViewController.swift in Sources */,
 				11969A1924B384F500F2C9FB /* GameViewController.swift in Sources */,
 				11969A1124B384F500F2C9FB /* AppDelegate.swift in Sources */,
@@ -258,6 +292,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1192C25725616D8500CC3437 /* backgroundMusic.mp3 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1192C25625616D8500CC3437 /* Base */,
+			);
+			name = backgroundMusic.mp3;
+			sourceTree = "<group>";
+		};
 		11969A1A24B384F500F2C9FB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

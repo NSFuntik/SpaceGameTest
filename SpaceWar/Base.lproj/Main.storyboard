@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-PJ-XL0">
-                                <rect key="frame" x="330" y="44" width="64" height="77"/>
+                                <rect key="frame" x="330" y="44" width="63" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pause-button"/>
                                 <connections>
@@ -82,6 +82,7 @@
                                     <constraint firstAttribute="width" constant="60" id="Lw4-Nh-nFo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="5" maxX="1" maxY="1"/>
                                 <state key="normal">
                                     <imageReference key="image" image="cart" symbolScale="large" renderingMode="original"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="ultraLight"/>
@@ -172,7 +173,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cart" width="1280" height="1225"/>
+        <image name="cart" width="640" height="612.5"/>
         <image name="onButton" width="64" height="64"/>
         <image name="pause" width="800" height="245"/>
         <image name="pause-button" width="512" height="512"/>
