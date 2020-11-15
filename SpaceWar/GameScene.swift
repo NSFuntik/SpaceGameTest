@@ -13,13 +13,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var gameViewControllerBridge: GameViewController!
     var gameOverViewControllerBridge: GameOverViewController!
-    
+    var didFinishScene: (() -> Void)?
+
+    //MARK: - Bitmasks
     let spaceShipCategory: UInt32 = 0x1 << 0
     let asteroidCategory: UInt32 = 0x1 << 1
     
-    var didFinishScene: (() -> Void)?
-
-    var score = 0
     var spaceShip: SKSpriteNode!
     var scoreLabel: SKLabelNode!
     var spaceBackground: SKSpriteNode!
@@ -27,18 +26,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var starsLayer: SKNode!
     var spaceShipLayer: SKNode!
     var musicPlayer: AVAudioPlayer!
-
-    var gameIsPaused: Bool = false
+    var gameIsPaused = false
     var musicOn = true
     var soundOn = true
+    var score = 0
     
     
-    func musicOnOrOff() {
-        if musicOn {
-            musicPlayer.play()
-        } else {
-            musicPlayer.stop()
-        }
+    func musicToggle() {
+        if musicOn { musicPlayer.play() }
+        else { musicPlayer.stop() }
     }
     
     func restartGame() {
@@ -63,28 +59,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.asteroidLayer.isPaused = false
         physicsWorld.speed = 1
         starsLayer.isPaused = false
-        musicOnOrOff()
+        musicToggle()
     }
     
     func resetTheGame() {
-        score = 0
-        scoreLabel.text = "Score: \(score)"
-        
         gameIsPaused = false
         self.asteroidLayer.isPaused = false
         physicsWorld.speed = 1
+        score = 0
+        scoreLabel.text = "Score: \(score)"
     }
     
     override func didMove(to view: SKView) {
-        physicsWorld.contactDelegate = self
-        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.8)
         scene?.size = UIScreen.main.bounds.size
         
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.8)
+        
+        //MARK: - Spacebackground config
         spaceBackground = SKSpriteNode(imageNamed: "spacebackground")
         spaceBackground.size = CGSize(width: UIScreen.main.bounds.width + 50, height: UIScreen.main.bounds.height + 50)
+        spaceBackground.zPosition = 0
         addChild(spaceBackground)
         
-        //stars
+        //MARK: - Stars config
         let starsPath = Bundle.main.path(forResource: "Stars", ofType: "sks")
         let starsEmitter = NSKeyedUnarchiver.unarchiveObject(withFile: starsPath!) as! SKEmitterNode
 	
@@ -99,7 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         starsLayer.addChild(starsEmitter)
         
-        // init node
+        //MARK: - Spaceship config
         spaceShip = SKSpriteNode(imageNamed: "spaceship")
         spaceShip.xScale = 0.5
         spaceShip.yScale = 0.5
@@ -110,7 +108,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spaceShip.physicsBody?.collisionBitMask = asteroidCategory
         spaceShip.physicsBody?.contactTestBitMask = asteroidCategory
         
-        let colorAction1 = SKAction.colorize(with: .green, colorBlendFactor: 1, duration: 1)
+        let colorAction1 = SKAction.colorize(with: .orange, colorBlendFactor: 1, duration: 1)
         let colorAction2 = SKAction.colorize(with: .white, colorBlendFactor: 0, duration: 1)
         
         let colorSequenceAnimation = SKAction.sequence([colorAction1, colorAction2])
@@ -118,7 +116,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         spaceShip.run(colorActionRepeat)
         
-        //create layer for spaseShip and fire
+        //MARK: - Layer for spaceship and fire
         spaceShipLayer = SKNode()
         spaceShipLayer.addChild(spaceShip)
         spaceShipLayer.zPosition = 3
@@ -126,16 +124,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spaceShipLayer.position = CGPoint(x: frame.midX, y: frame.midY )
         addChild(spaceShipLayer)
         
-        //create fire
+        //MARK: - Fire config
         let firePath = Bundle.main.path(forResource: "Fire", ofType: "sks")
         let fireEmitter = NSKeyedUnarchiver.unarchiveObject(withFile: firePath!) as! SKEmitterNode
+        
         fireEmitter.zPosition = 0
         fireEmitter.position.y = -40
         fireEmitter.targetNode = self
         spaceShipLayer.addChild(fireEmitter)
         
         
-        //asteroid generate
+        //MARK: - Asteroids generate
         asteroidLayer = SKNode()
         asteroidLayer.zPosition = 2
         addChild(asteroidLayer)
@@ -144,7 +143,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let asteroid = self.createAsteroid()
             self.asteroidLayer.addChild(asteroid)
             asteroid.zPosition = 2
-            //self.asteroidLayer.isPaused = false
         }
         
         let asteroidPerSecond: Double = 2
@@ -153,16 +151,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let asteroidRunAction = SKAction.repeatForever(asteroidSequenceAction)
         
         self.asteroidLayer.run(asteroidRunAction)
-        //self.asteroidLayer.isPaused = false
         
-        //pauseTheGame()
+        //MARK: - Score label config
         scoreLabel = SKLabelNode(text: "Score: \(score)")
         scoreLabel.position = CGPoint(x: frame.size.width / scoreLabel.frame.size.width, y: 200)
-        addChild(scoreLabel)
-        
-        spaceBackground.zPosition = 0
-        //spaceShip.zPosition = 1
         scoreLabel.zPosition = 3
+        addChild(scoreLabel)
         
         playMusic()
     }
@@ -170,18 +164,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func playMusic() {
         if let musicPath = Bundle.main.url(forResource: "backgroundMusic", withExtension: "mp3") {
             musicPlayer = try! AVAudioPlayer(contentsOf: musicPath, fileTypeHint: nil)
-            musicOnOrOff()
+            musicToggle()
         }
         musicPlayer.numberOfLoops = -1
-        musicPlayer.volume = 0.2
+        musicPlayer.volume = 0.3
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if let touch = touches.first {
             let touchLocation = touch.location(in: self)
-            print(touchLocation)
-            
+            //print(touchLocation)
             let distance = distanceCalc(a: spaceShip.position, b: touchLocation)
             let speed: CGFloat = 500
             let time = timeToTravelDistance(distance: distance, speed: speed)
@@ -203,6 +196,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return TimeInterval(time)
     }
     
+    //MARK: - Asteroids creating config
     func createAsteroid() -> SKSpriteNode {
         let asteroid = SKSpriteNode(imageNamed: "asteroid")
         
@@ -220,7 +214,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         asteroid.physicsBody?.collisionBitMask = spaceShipCategory | asteroidCategory
         asteroid.physicsBody?.contactTestBitMask = spaceShipCategory
         
-        let asteroidSpeed: CGFloat = 100.0
+        let asteroidSpeed: CGFloat = 90.0
         asteroid.physicsBody?.angularVelocity = CGFloat(drand48() * 2 - 1) * 3
         asteroid.physicsBody?.velocity.dx = CGFloat(drand48() * 2 - 1) * asteroidSpeed
         
@@ -234,14 +228,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if asteroid.position.y < -heightScreen {
                 asteroid.removeFromParent()
                 
-                self.score = self.score + 1
+                self.score += 1
                 self.scoreLabel.text = "Score: \(self.score)"
             }
         }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.categoryBitMask == spaceShipCategory && contact.bodyB.categoryBitMask == asteroidCategory || contact.bodyB.categoryBitMask == spaceShipCategory && contact.bodyA.categoryBitMask == asteroidCategory {
+        if contact.bodyA.categoryBitMask == spaceShipCategory && contact.bodyB.categoryBitMask == asteroidCategory || contact.bodyB.categoryBitMask == spaceShipCategory && contact.bodyA.categoryBitMask == asteroidCategory   {
+            
             pauseTheGame()
             
             gameViewControllerBridge.addChild(gameOverViewControllerBridge)
@@ -255,6 +250,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 UserDefaults.standard.set(score, forKey: "record")
             }
             
+            // animation
             gameOverViewControllerBridge.view.alpha = 0
             UIView.animate(withDuration: 0.5) {
                 self.gameOverViewControllerBridge.view.alpha = 1
@@ -262,9 +258,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         let hitSoundAction = SKAction.playSoundFileNamed("hitSound", waitForCompletion: true)
         run(hitSoundAction)
-        //self.didFinishScene?()
     }
-    
-    
 }
 

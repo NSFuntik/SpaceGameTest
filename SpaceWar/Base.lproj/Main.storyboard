@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-PJ-XL0">
-                                <rect key="frame" x="335" y="20" width="63" height="77"/>
+                                <rect key="frame" x="330" y="44" width="64" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pause-button"/>
                                 <connections>
@@ -58,26 +58,15 @@
                                     <action selector="playButtonPess:" destination="e9H-Kc-kJ7" eventType="touchUpInside" id="V27-CX-vm7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-9F-wnX">
-                                <rect key="frame" x="16" y="50" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="KyH-sA-aMc"/>
-                                    <constraint firstAttribute="width" constant="60" id="Lw4-Nh-nFo"/>
-                                </constraints>
-                                <state key="normal" image="menu"/>
-                                <connections>
-                                    <action selector="menuButtonPress:" destination="e9H-Kc-kJ7" eventType="touchUpInside" id="AmW-AX-gIc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-rp-bah">
                                 <rect key="frame" x="46" y="454" width="180" height="45"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7j-oI-u7v">
-                                <rect key="frame" x="283" y="441" width="84" height="70"/>
+                                <rect key="frame" x="282" y="441" width="85" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="onButton">
                                     <color key="titleColor" red="0.91169500349999999" green="0.87880545850000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -86,25 +75,27 @@
                                     <action selector="musicButtonPress:" destination="e9H-Kc-kJ7" eventType="touchUpInside" id="ETK-6K-lK2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-TC-2ow">
-                                <rect key="frame" x="334" y="50" width="60" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-9F-wnX">
+                                <rect key="frame" x="20" y="44" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="MeN-km-Ul9"/>
-                                    <constraint firstAttribute="width" constant="60" id="oOQ-8O-ATV"/>
+                                    <constraint firstAttribute="height" constant="60" id="KyH-sA-aMc"/>
+                                    <constraint firstAttribute="width" constant="60" id="Lw4-Nh-nFo"/>
                                 </constraints>
-                                <state key="normal" image="cart"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="cart" symbolScale="large" renderingMode="original"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="ultraLight"/>
+                                </state>
                                 <connections>
-                                    <action selector="storeButtonPress:" destination="e9H-Kc-kJ7" eventType="touchUpInside" id="Foj-Bb-rR4"/>
+                                    <action selector="menuButtonPress:" destination="e9H-Kc-kJ7" eventType="touchUpInside" id="AmW-AX-gIc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O5b-aM-RMg"/>
                         <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.50768678293288128" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="O5b-aM-RMg" firstAttribute="trailing" secondItem="bNt-TC-2ow" secondAttribute="trailing" constant="20" id="0s3-ez-ymX"/>
-                            <constraint firstItem="O5b-aM-RMg" firstAttribute="top" secondItem="p7K-9F-wnX" secondAttribute="top" constant="-6" id="Lfj-Zu-e8w"/>
-                            <constraint firstItem="O5b-aM-RMg" firstAttribute="top" secondItem="bNt-TC-2ow" secondAttribute="top" constant="-6" id="nUV-9R-4pC"/>
-                            <constraint firstItem="p7K-9F-wnX" firstAttribute="leading" secondItem="O5b-aM-RMg" secondAttribute="leading" constant="16" id="neD-Xd-0vK"/>
+                            <constraint firstItem="O5b-aM-RMg" firstAttribute="top" secondItem="p7K-9F-wnX" secondAttribute="top" id="Lfj-Zu-e8w"/>
+                            <constraint firstItem="p7K-9F-wnX" firstAttribute="leading" secondItem="O5b-aM-RMg" secondAttribute="leading" constant="20" id="neD-Xd-0vK"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="1125" height="2436"/>
@@ -124,20 +115,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-QF-uUm">
-                                <rect key="frame" x="0.0" y="279" width="414" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-QF-uUm">
+                                <rect key="frame" x="113" y="279" width="188" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.7569197168890035" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mn-AH-amv">
-                                <rect key="frame" x="177" y="450" width="60" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mn-AH-amv">
+                                <rect key="frame" x="181.5" y="450" width="51" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.91169500349999999" green="0.87880545850000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your scores:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYX-76-OlP">
-                                <rect key="frame" x="130.5" y="390" width="153" height="36"/>
+                                <rect key="frame" x="131.5" y="390" width="153.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" red="0.91169500349999999" green="0.87880545850000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -161,7 +152,7 @@
                         <color key="backgroundColor" red="0.13426455255322425" green="0.13553418920029978" blue="0.1392937139936079" alpha="0.70425818101415094" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2mn-AH-amv" firstAttribute="centerX" secondItem="yvU-NP-334" secondAttribute="centerX" id="2eg-5e-Xzx"/>
-                            <constraint firstItem="qYX-76-OlP" firstAttribute="centerX" secondItem="yvU-NP-334" secondAttribute="centerX" id="7SI-PE-wFu"/>
+                            <constraint firstItem="qYX-76-OlP" firstAttribute="centerX" secondItem="yvU-NP-334" secondAttribute="centerX" constant="1" id="7SI-PE-wFu"/>
                             <constraint firstItem="K0K-QF-uUm" firstAttribute="top" secondItem="yvU-NP-334" secondAttribute="top" constant="235" id="7nI-rz-mBt"/>
                             <constraint firstItem="yvU-NP-334" firstAttribute="bottom" secondItem="dMK-f8-4Yw" secondAttribute="bottom" id="Acw-HU-YPz"/>
                             <constraint firstItem="2mn-AH-amv" firstAttribute="top" secondItem="qYX-76-OlP" secondAttribute="bottom" constant="24" id="GIH-A0-AM1"/>
@@ -182,7 +173,6 @@
     </scenes>
     <resources>
         <image name="cart" width="1280" height="1225"/>
-        <image name="menu" width="400" height="400"/>
         <image name="onButton" width="64" height="64"/>
         <image name="pause" width="800" height="245"/>
         <image name="pause-button" width="512" height="512"/>

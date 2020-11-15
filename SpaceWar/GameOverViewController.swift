@@ -7,23 +7,15 @@
 
 import UIKit
 
-protocol GameOverDelegate {
+protocol IGameOverDelegate {
     func gameOverVCReplyButtonPressed(_ viewController: GameOverViewController)
 }
 
 class GameOverViewController: UIViewController {
+    var delegate: IGameOverDelegate!
 
     @IBOutlet weak var scoreLabel: UILabel!
-    
-    var delegate: GameOverDelegate!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
     @IBAction func resetButton(_ sender: UIButton) {
         delegate.gameOverVCReplyButtonPressed(self)
     }
-    
 }

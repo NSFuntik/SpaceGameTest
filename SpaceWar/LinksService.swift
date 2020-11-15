@@ -9,12 +9,10 @@ import Foundation
 
 final class LinksService {
 
-    //MARK: - typealias
+    // Typealias
+    typealias EmptyClosure = (() -> Void)
 
-    typealias EmptyCloser = (() -> Void)
-
-    //MARK: - Public properties
-
+    // Public properties
     static let shared = LinksService()
     
     var deepLink: URL? {
@@ -23,23 +21,18 @@ final class LinksService {
         }
     }
 
-    //MARK: - Private properties
+    // Private properties
+    private var completion: EmptyClosure?
 
-    private var completion: EmptyCloser?
-
-    //MARK: - Public methods
-
-    func handleDeepLinkURL(_ url: URL?, completion: EmptyCloser?) {
-        guard let url = url else {
-            return
-        }
+    // Public methods
+    func handleDeepLinkURL(_ url: URL?, completion: EmptyClosure?) {
+        guard let url = url else { return }
         deepLink = url
         completion?()
         self.completion?()
     }
 
-    func setCompletion(_ completion: EmptyCloser?) {
+    func setCompletion(_ completion: EmptyClosure?) {
         self.completion = completion
     }
-
 }
