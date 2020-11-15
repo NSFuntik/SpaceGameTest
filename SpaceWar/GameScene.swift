@@ -31,6 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var musicOn = true
     var soundOn = true
     
+    
     func musicOnOrOff() {
         if musicOn {
             musicPlayer.play()
@@ -74,10 +75,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMove(to view: SKView) {
-        
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.8)
-        
         scene?.size = UIScreen.main.bounds.size
         
         spaceBackground = SKSpriteNode(imageNamed: "spacebackground")
@@ -144,6 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let asteroid = self.createAsteroid()
             self.asteroidLayer.addChild(asteroid)
             asteroid.zPosition = 2
+            //self.asteroidLayer.isPaused = false
         }
         
         let asteroidPerSecond: Double = 2
@@ -152,7 +152,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let asteroidRunAction = SKAction.repeatForever(asteroidSequenceAction)
         
         self.asteroidLayer.run(asteroidRunAction)
+        //self.asteroidLayer.isPaused = false
         
+        //pauseTheGame()
         scoreLabel = SKLabelNode(text: "Score: \(score)")
         scoreLabel.position = CGPoint(x: frame.size.width / scoreLabel.frame.size.width, y: 200)
         addChild(scoreLabel)
@@ -224,10 +226,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return asteroid
     }
     
-    override func update(_ currentTime: TimeInterval) {
-        // let asteroid = createAsteroid()
-        // addChild(asteroid)
-    }
     
     override func didSimulatePhysics() {
         asteroidLayer.enumerateChildNodes(withName: "asteroid") { (asteroid, stop) in
@@ -263,7 +261,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         let hitSoundAction = SKAction.playSoundFileNamed("hitSound", waitForCompletion: true)
         run(hitSoundAction)
-        
     }
+    
+    
 }
 

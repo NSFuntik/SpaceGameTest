@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1174447B2560D209008AFB61 /* LinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174447A2560D209008AFB61 /* LinksService.swift */; };
 		118EA03D24C1CFB000AFFB78 /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03C24C1CFB000AFFB78 /* Stars.sks */; };
 		118EA04024C1DA4900AFFB78 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 118EA03E24C1DA4900AFFB78 /* Fire.sks */; };
 		118EA04524C1E0CC00AFFB78 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */; };
@@ -20,9 +21,11 @@
 		11D34ABB24C489C000A4DF8D /* hitSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11D34ABA24C489C000A4DF8D /* hitSound.mp3 */; };
 		11D34ABD24C48BC400A4DF8D /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11D34ABC24C48BC400A4DF8D /* backgroundMusic.mp3 */; };
 		11D34ABF24C4A9B800A4DF8D /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */; };
+		B4DD847698DD1E6B15729A4A /* Pods_SpaceWar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2436FDA3F6CF1AFC68FB10 /* Pods_SpaceWar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1174447A2560D209008AFB61 /* LinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksService.swift; sourceTree = "<group>"; };
 		118EA03C24C1CFB000AFFB78 /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
 		118EA03E24C1DA4900AFFB78 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		11D34ABA24C489C000A4DF8D /* hitSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hitSound.mp3; sourceTree = "<group>"; };
 		11D34ABC24C48BC400A4DF8D /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		642707E2ED319D6C3F01BE6F /* Pods-SpaceWar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceWar.debug.xcconfig"; path = "Target Support Files/Pods-SpaceWar/Pods-SpaceWar.debug.xcconfig"; sourceTree = "<group>"; };
+		CE53558BA27EE89A221C38BE /* Pods-SpaceWar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceWar.release.xcconfig"; path = "Target Support Files/Pods-SpaceWar/Pods-SpaceWar.release.xcconfig"; sourceTree = "<group>"; };
+		FE2436FDA3F6CF1AFC68FB10 /* Pods_SpaceWar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceWar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DD847698DD1E6B15729A4A /* Pods_SpaceWar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 			children = (
 				11969A0F24B384F500F2C9FB /* SpaceWar */,
 				11969A0E24B384F500F2C9FB /* Products */,
+				FD47392B39797A9CAFF7FADE /* Pods */,
+				41119C1CF96906AF96B14AE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +81,7 @@
 			children = (
 				11969A1024B384F500F2C9FB /* AppDelegate.swift */,
 				11969A1624B384F500F2C9FB /* GameScene.swift */,
+				1174447A2560D209008AFB61 /* LinksService.swift */,
 				11969A1824B384F500F2C9FB /* GameViewController.swift */,
 				118EA04424C1E0CC00AFFB78 /* PauseViewController.swift */,
 				11D34ABE24C4A9B800A4DF8D /* GameOverViewController.swift */,
@@ -96,6 +106,23 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
+		41119C1CF96906AF96B14AE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2436FDA3F6CF1AFC68FB10 /* Pods_SpaceWar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD47392B39797A9CAFF7FADE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				642707E2ED319D6C3F01BE6F /* Pods-SpaceWar.debug.xcconfig */,
+				CE53558BA27EE89A221C38BE /* Pods-SpaceWar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11969A2224B384F700F2C9FB /* Build configuration list for PBXNativeTarget "SpaceWar" */;
 			buildPhases = (
+				15D2F29D54C6D09896778FD1 /* [CP] Check Pods Manifest.lock */,
 				11969A0924B384F500F2C9FB /* Sources */,
 				11969A0A24B384F500F2C9FB /* Frameworks */,
 				11969A0B24B384F500F2C9FB /* Resources */,
+				DE98BCD576687D8EEF445527 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +195,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15D2F29D54C6D09896778FD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpaceWar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE98BCD576687D8EEF445527 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceWar/Pods-SpaceWar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceWar/Pods-SpaceWar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceWar/Pods-SpaceWar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11969A0924B384F500F2C9FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,6 +247,7 @@
 				11969A1924B384F500F2C9FB /* GameViewController.swift in Sources */,
 				11969A1124B384F500F2C9FB /* AppDelegate.swift in Sources */,
 				11D34ABF24C4A9B800A4DF8D /* GameOverViewController.swift in Sources */,
+				1174447B2560D209008AFB61 /* LinksService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +383,7 @@
 		};
 		11969A2324B384F700F2C9FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 642707E2ED319D6C3F01BE6F /* Pods-SpaceWar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +395,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DM.SpaceWar;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.funtik.SpaceWar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,6 +404,7 @@
 		};
 		11969A2424B384F700F2C9FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE53558BA27EE89A221C38BE /* Pods-SpaceWar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DM.SpaceWar;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.funtik.SpaceWar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
